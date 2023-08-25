@@ -1,0 +1,11 @@
+
+#idButton {
+    background-color: #535bf2;
+}
+
+/*It's better descending order, with cmd + opt + L*/
+#idButton:hover {
+    font-family: "Comic Sans MS", "Arial";
+    background-color: black;
+    color: red;
+}
