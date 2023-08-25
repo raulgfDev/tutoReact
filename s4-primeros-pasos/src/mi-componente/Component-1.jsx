@@ -1,5 +1,5 @@
 
-import './Component.css'
+import './Component-1.css'
 
 //it is the same, in or out of the funct component
 // the scope it is the same, it's better out
@@ -9,7 +9,7 @@ const dentroOFuera = 'rgfDev'
 const unaFunct = ( a, b ) => a + b;
 
 // != file App.jsx, here with arrow funct.
-export const Component = ( props ) => {
+export const Component1 = (props ) => {
 
     const dentro = 'Hola Mundo';
 
