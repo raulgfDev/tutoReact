@@ -4,7 +4,8 @@ import App from './App.jsx' // export default, without {}
 import './index.css'
 import {Component1} from "./mi-componente/Component-1.jsx";
 import {ComponentDos} from "./mi-componente/Component-2";
-import {ComponentTres} from "./mi-componente/Component-3"; // != export defatult, with {}
+import {ComponentTres} from "./mi-componente/Component-3";
+import {ComponentCuatro} from "./mi-componente/Component-4"; // != export defatult, with {}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,5 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Component1 nameButton="Pulsar" paraH2="propiedad"/>
       <ComponentDos footer="pie de pagina" numero = { 6 + 5 } />
       <ComponentTres title='rgfDev'  />
+      <ComponentCuatro value= { 4 }/>
   </React.StrictMode>,
 )
