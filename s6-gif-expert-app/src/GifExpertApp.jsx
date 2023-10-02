@@ -1,6 +1,7 @@
 // snippet for creating funcComp = rsf
 
 import { useState } from 'react';
+import AddCategory from "./components/AddCategory.jsx";
 
 const GifExpertApp = () => {
 
@@ -24,7 +25,7 @@ const GifExpertApp = () => {
     return (
         <>
             <h1>GifExpertApp</h1>
-
+            <AddCategory setCategories={ setCategories }/>
             <button onClick={ onAddCategory }>Add Category</button>
 
             <ol>
