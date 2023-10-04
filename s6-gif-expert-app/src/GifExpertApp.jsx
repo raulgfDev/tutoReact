@@ -2,15 +2,18 @@
 
 import { useState } from 'react';
 import AddCategory from "./components/AddCategory.jsx";
+import {GifGrid} from "./components/GifGrid";
 
 const GifExpertApp = () => {
 
     // it's possible more than one .useState()
     const [ categories, setCategories ] = useState(['Metal Gear', 'One Punch'] );
 
-    const onAddCategory = () => {
+    const onAddCategory = ( newCategory ) => {
 
-        setCategories([ ...categories, 'Oliver y Bengi']);
+        if ( categories.includes( newCategory ) ) return;
+
+        setCategories([ newCategory, ...categories]);
         /* also, it's possible with callback:
 
             setCategories( categories => {
@@ -25,17 +28,27 @@ const GifExpertApp = () => {
     return (
         <>
             <h1>GifExpertApp</h1>
-            <AddCategory setCategories={ setCategories }/>
-            <button onClick={ onAddCategory }>Add Category</button>
 
-            <ol>
-                {
-                    categories.map( category => {
-                        // necessary atr. 'key'
-                       return <li key={ category }>{ category }</li>
-                    })
-                }
-            </ol>
+            {
+                /*
+                VD 80 - the component bellow is the same that:
+                <AddCategory onAddCategory = { (value) => onAddCategory(value) } />
+                'on...()' this name of method is recommended when there is an event
+                */
+            }
+            <AddCategory onAddCategory={ onAddCategory }/>
+
+
+            {/* VD 82 2' "return {(...)}" the same "(...) */
+
+                categories.map( category => (
+                    <GifGrid
+                        // necessary the attr key for React
+                        key={ category }
+                        category={ category }
+                    />
+                ))
+            }
         </>
     )
 };
