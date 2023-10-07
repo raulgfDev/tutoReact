@@ -7,7 +7,7 @@ import {GifGrid} from "./components/GifGrid";
 const GifExpertApp = () => {
 
     // it's possible more than one .useState()
-    const [ categories, setCategories ] = useState(['Metal Gear', 'One Punch'] );
+    const [ categories, setCategories ] = useState(['Metal Gear'] );
 
     const onAddCategory = ( newCategory ) => {
 
