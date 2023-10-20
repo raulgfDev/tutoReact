@@ -1,0 +1,15 @@
+body {
+
+    padding: 20px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.lineHr {
+    border: none; /* Elimina la línea por defecto del hr */
+    height: 6px;   /* Grosor del hr */
+    background-color: #FF0000; /* Cambia el color de fondo del hr (rojo en este caso) */
+    margin: 20px 0; /* Agrega un espacio vertical alrededor del hr */
+}
