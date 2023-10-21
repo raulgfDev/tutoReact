@@ -44,7 +44,7 @@ export const SimpleForm = () => {
 
             <input 
                 type="text"
-                className="form-control"
+                className="form-control bg-info"
                 placeholder="User Name"
                 name="userName"
                 value={ userName }
